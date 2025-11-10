@@ -4,12 +4,6 @@ namespace MyFirstWebApi.Services
 {
     public class InMemoryTestProductRepository : IProductRepository
     {
-
-        public InMemoryTestProductRepository()
-        {
-                
-        }
-
         public List<ProductEntity> _store = new List<ProductEntity>();
 
         public Task AddProductAsync(ProductEntity product)

@@ -17,6 +17,18 @@ public class ProductsController(IProductRepository _productRepository) : Control
             .ToList());
     }
 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetProductById(Guid id)
+    {
+        var product = await _productRepository.GetProductByIdAsync(id);
+        if(product == null)
+        {
+            return NotFound();
+        }
+        var res = new ProductDto(product.Id, product.Name, product.Price, product.Description);
+        return Ok(res);
+    }
+
     [HttpPost]
     public async Task<IActionResult> CreateProductAsync(ProductDto product)
     {
