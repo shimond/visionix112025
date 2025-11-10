@@ -1,70 +1,29 @@
 using MyFirstWebApi.Middlewares;
+using MyFirstWebApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-//builder.Services.AddControllers();
-//builder.Services.AddOpenApi();
-
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+builder.Services.AddOutputCache(); // in memory cache
 var app = builder.Build();
 
-app.UseStaticFiles();
+app.UseOutputCache();
+app.MapControllers();
 
-app.Use(async (context, next) => { 
-    await context.Response.WriteAsync("  Middleware A 1: Before   ");
-    await next();
-    await context.Response.WriteAsync("  Middleware A 2: Before   ");
-});
-
-app.Use(async (context, next) => {
-    await context.Response.WriteAsync("   Middleware B 1: Before   ");
-    await next();
-    await context.Response.WriteAsync("   Middleware B 2: Before   ");
-});
-
-app.Use(async (context, next) => {
-    await context.Response.WriteAsync("  Middleware C 1: Before  ");
-    await next();
-    await context.Response.WriteAsync("  Middleware C 2: Before  ");
-});
-
-app.Run(async (context) =>
-{
-    await context.Response.WriteAsync("Hello, World!");
-});
 
 app.Run();
 
 
-
-var names = new string[] { "Alice", "Bob", "Charlie", "David", "Eve" };
-var shortNames = names.Where(name => name.Length <= 3);
-var upperNames = names.Select(name => name.ToUpper());
-var FirstLetterNames = names.Select(name => name[0]);   
-var namesOrderd = names.OrderBy(name => name.Length).ThenBy(name => name);
+// Status codes:
+// 200, 201, 202, 204 - OK
+// 400,401, 404, 405, 409 - Client error
+// 500 - server error
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// GET  - API/PRODUCTS/PAGE/3/4/OB-{FIELD}?FULL=1&SORT=DESC
+// POST -  Insert  - 201 - body object to insert
+// DELTE - Delete - body empty
+// PUT - Update - body object to update - full update
+// PATCH - Partial update - body object with fields to update
+// OPTIONS - Get supported methods
