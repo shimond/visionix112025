@@ -1,4 +1,4 @@
-# Exercise 4: Asynchronous Services & Controllers
+# Exercise 2: Asynchronous Services & Controllers
 
 ## Project Overview
 
