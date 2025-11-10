@@ -1,6 +1,25 @@
 @MyFirstWebApi_HostAddress = http://localhost:5233
 
-GET {{MyFirstWebApi_HostAddress}}/weatherforecast/
+
+GET http://walla.co.il
 Accept: application/json
+
+
+####
+
+GET {{MyFirstWebApi_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+POST {{MyFirstWebApi_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "id": "{{$guid}}",
+  "name": "Sample 123123",
+  "price": 45.29,
+  "description": "This is a sample product description"
+}
 
 ###

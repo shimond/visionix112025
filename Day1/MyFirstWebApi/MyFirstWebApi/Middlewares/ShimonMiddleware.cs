@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using MyFirstWebApi.Contracts;
 using System.Threading.Tasks;
 
 namespace MyFirstWebApi.Middlewares
@@ -13,7 +14,7 @@ namespace MyFirstWebApi.Middlewares
             _next = next;
         }
 
-        public async Task Invoke(HttpContext httpContext)
+        public async Task Invoke(HttpContext httpContext, IProductRepository product)
         {
             Console.WriteLine("1");
             await _next(httpContext);

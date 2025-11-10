@@ -1,12 +1,10 @@
-﻿
-
-namespace MyFirstWebApi.Contracts;
+﻿namespace MyFirstWebApi.Contracts;
 
 public interface IProductRepository
 {
-    Task<List<ProductDto>> GetAllProductsAsync();
-    Task<ProductDto?> GetProductByIdAsync(int id);
-    Task AddProductAsync(ProductDto product);
-    Task UpdateProductAsync(ProductDto product);
-    Task DeleteProductAsync(int id);
+    Task<List<ProductEntity>> GetAllProductsAsync();
+    Task<ProductEntity?> GetProductByIdAsync(Guid id);
+    Task AddProductAsync(ProductEntity product);
+    Task UpdateProductAsync(ProductEntity product);
+    Task DeleteProductAsync(Guid id);
 }
