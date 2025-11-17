@@ -1,0 +1,48 @@
+@MyFirstWebApi_HostAddress = http://localhost:5233
+
+
+GET http://walla.co.il
+Accept: application/json
+
+###
+PUT {{MyFirstWebApi_HostAddress}}/api/products/275a4f7c-5b21-46c0-a7a4-12d662629dc1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "275a4f7c-5b21-46c0-a7a4-12d662629dc1",
+  "name": "new_val",
+  "price": 80,
+  "description": "80000"
+}
+
+
+####
+
+###
+DELETE {{MyFirstWebApi_HostAddress}}/api/products/795215ed-2195-4906-89c8-cba5d84c777b
+Accept: application/json
+
+####
+###
+GET {{MyFirstWebApi_HostAddress}}/api/products/795215ed-2195-4906-89c8-cba5d84c777b
+Accept: application/json
+
+####
+
+GET {{MyFirstWebApi_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+POST {{MyFirstWebApi_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "id": "{{$guid}}",
+  "name": "Sample 111",
+  "price": 101,
+  "description": "101 description"
+}
+
+###

@@ -1,0 +1,17 @@
+@UseConfiguration_HostAddress = http://localhost:5164
+
+GET {{UseConfiguration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+PATCH {{UseConfiguration_HostAddress}}/api/values/motor/M002/NEW_NAME
+Accept: application/json
+
+
+### 
+GET {{UseConfiguration_HostAddress}}/api/values/motors
+Accept: application/json
+
+
+

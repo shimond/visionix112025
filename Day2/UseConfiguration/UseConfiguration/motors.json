@@ -1,0 +1,40 @@
+{
+  "Motors": [
+    {
+      "Id": "M001",
+      "Name": "Industrial Motor Alpha",
+      "Type": "WOW WOW WOW",
+      "MaxSpeed": 3600,
+      "Power": 15000,
+      "Manufacturer": "Siemens",
+      "IsActive": true
+    },
+    {
+      "Id": "M002",
+      "Name": "NEW_NAME",
+      "Type": "Servo",
+      "MaxSpeed": 5000,
+      "Power": 7500,
+      "Manufacturer": "Fanuc",
+      "IsActive": true
+    },
+    {
+      "Id": "M003",
+      "Name": "Stepper Motor Gamma",
+      "Type": "Stepper",
+      "MaxSpeed": 2000,
+      "Power": 3000,
+      "Manufacturer": "Oriental Motor",
+      "IsActive": false
+    },
+    {
+      "Id": "M004",
+      "Name": "DC Brushless Delta",
+      "Type": "DC Brushless",
+      "MaxSpeed": 8000,
+      "Power": 10000,
+      "Manufacturer": "Maxon",
+      "IsActive": true
+    }
+  ]
+}
