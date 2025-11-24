@@ -12,17 +12,12 @@ builder.Services.AddServiceDiscovery();
 
 builder.Services.AddScoped<IPaymentClient, PaymentClient>();
 
-var retryPolicy =  HttpPolicyExtensions.HandleTransientHttpError().WaitAndRetryAsync(3, x =>
-{
-    return TimeSpan.FromSeconds(1);
-});
 
 builder.Services.AddHttpClient<IPaymentClient, PaymentClient>(client =>
 {
     client.BaseAddress = new Uri("https://PaymentService");
-
-}).AddPolicyHandler(retryPolicy)
-  .AddServiceDiscovery();
+});
+  
 
 
 var app = builder.Build();
