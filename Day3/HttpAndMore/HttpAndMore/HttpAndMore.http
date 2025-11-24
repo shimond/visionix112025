@@ -1,0 +1,7 @@
+@HttpAndMore_HostAddress = http://localhost:5184
+
+GET {{HttpAndMore_HostAddress}}/TestPaymentService
+Accept: application/json
+
+
+###
