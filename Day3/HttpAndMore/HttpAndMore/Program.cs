@@ -16,6 +16,7 @@ builder.Services.AddScoped<IPaymentClient, PaymentClient>();
 builder.Services.AddHttpClient<IPaymentClient, PaymentClient>(client =>
 {
     client.BaseAddress = new Uri("https://PaymentService");
+    client.DefaultRequestHeaders.Add("X-test", "OOOOOO");
 });
   
 

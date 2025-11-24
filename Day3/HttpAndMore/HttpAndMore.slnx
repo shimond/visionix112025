@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="HttpAndMore/HttpAndMore.csproj" />
+  <Project Path="HttpAndMoreAspire.AppHost/HttpAndMoreAspire.AppHost.csproj" />
+  <Project Path="HttpAndMoreAspire.ServiceDefaults/HttpAndMoreAspire.ServiceDefaults.csproj" />
   <Project Path="PaymentService/PaymentService.csproj" />
-  <Project Path="ServiceDefaults/ServiceDefaults.csproj" />
 </Solution>
