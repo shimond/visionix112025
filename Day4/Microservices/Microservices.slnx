@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/BFF/">
+    <Project Path="Mobile.BFF/Mobile.BFF.csproj" />
+  </Folder>
+  <Project Path="Microservices.AppHost/Microservices.AppHost.csproj" />
+  <Project Path="Microservices.ServiceDefaults/Microservices.ServiceDefaults.csproj" />
+  <Project Path="Payment.Api/Payment.Api.csproj" />
+  <Project Path="SmsManagment/SmsManagment.csproj" />
+</Solution>

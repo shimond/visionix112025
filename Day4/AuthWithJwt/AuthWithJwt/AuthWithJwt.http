@@ -1,0 +1,18 @@
+@AuthWithJwt_HostAddress = https://localhost:7186
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNoaW1vbi10ZXN0Iiwic3ViIjoic2hpbW9uLXRlc3QiLCJqdGkiOiI0YjZhNDEzIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTIyOSIsImh0dHBzOi8vbG9jYWxob3N0OjcxODYiXSwibmJmIjoxNzY1NDQ0NDQ5LCJleHAiOjE3NzMyMjA0NDksImlhdCI6MTc2NTQ0NDQ1MSwiaXNzIjoiZG90bmV0LXVzZXItand0cyJ9.fwCKvyUkc-UigchKFQpFf1jbxzcLQw6UQq9WWEuAemg
+@adminToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNoaW1vbi1hZG1pbiIsInN1YiI6InNoaW1vbi1hZG1pbiIsImp0aSI6IjUxZDI1NjlmIiwicm9sZSI6IkFkbWluIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTIyOSIsImh0dHBzOi8vbG9jYWxob3N0OjcxODYiXSwibmJmIjoxNzY1NDQ1NzY2LCJleHAiOjE3NzMyMjE3NjYsImlhdCI6MTc2NTQ0NTc2NywiaXNzIjoiZG90bmV0LXVzZXItand0cyJ9.JbeVvU9SXUG6D8xaMqcoLwD2bR9Yj0LB_mdMfAJolxA
+GET {{AuthWithJwt_HostAddress}}/All/
+Accept: application/json
+
+###
+
+GET {{AuthWithJwt_HostAddress}}/Auth
+Authorization: Bearer  {{token}}
+###
+
+
+GET {{AuthWithJwt_HostAddress}}/Admin-Auth
+Authorization: Bearer  {{adminToken}}
+
+
